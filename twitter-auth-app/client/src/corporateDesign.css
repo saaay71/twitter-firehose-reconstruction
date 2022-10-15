@@ -1,0 +1,10 @@
+:root {
+  --colorPrimary: #f6a800;
+  --colorSeconday: #b1063a;
+  --colorWarning: #f6a800;
+  --colorWarningNotificationIcon: #ff6b00;
+  --colorErrorNotificationBackground: #ffbbbb;
+  --colorErrorNotificationIcon: #cc0000;
+}
+
+/* c('#b1063a','#dd6108','#f6a800','#5a6065','#007a9e')) */

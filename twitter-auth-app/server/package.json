@@ -1,0 +1,42 @@
+{
+  "name": "twitter-oauth-login-in-nodejs",
+  "version": "1.0.0",
+  "description": "twitter-oauth-login-in-nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start-development": "NODE_ENV=development node index.js",
+    "start-production": "NODE_ENV=production node index.js",
+    "node": "node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christian-fei/twitter-oauth-login-in-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christian-fei/twitter-oauth-login-in-nodejs/issues"
+  },
+  "homepage": "https://github.com/christian-fei/twitter-oauth-login-in-nodejs#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.3",
+    "express-session": "^1.17.0",
+    "fastify": "^2.15.1",
+    "fastify-cookie": "^3.6.0",
+    "fastify-session": "^3.3.0",
+    "helmet": "^5.0.2",
+    "oauth": "^0.9.15",
+    "request": "^2.88.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,3 @@
+const DOMAIN_NAME = "https://www.your-domain.de";
+
+export default DOMAIN_NAME;

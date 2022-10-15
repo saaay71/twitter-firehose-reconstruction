@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Home",
+    "link": "/"
+  },
+  {
+    "title": "About",
+    "link": "/about"
+  },
+  {
+    "title": "Privacy",
+    "link": "/privacy"
+  }
+]

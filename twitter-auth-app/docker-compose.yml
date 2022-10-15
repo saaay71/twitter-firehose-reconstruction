@@ -1,0 +1,8 @@
+version: "2.1"
+services:
+  webapp:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./public_credential_store:/app/public_credential_store

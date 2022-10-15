@@ -1,0 +1,5 @@
+cassandra-driver
+pika
+redis
+requests
+requests_oauthlib

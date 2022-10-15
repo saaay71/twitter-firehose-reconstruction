@@ -1,0 +1,8 @@
+twitter_consumer_api_key=zxxxxxxxxxxxxxxxxxxxxxxx6
+twitter_consumer_api_secret_key=JxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxP
+twitter_callback_url=https://theURLYouGaveTwitterAsACallback.pizza/twitter/callback
+cookie_secret=aRandomString
+use_telegram= # If this is 'YES' you will get a Telegram each time a user authenticates itself
+telegram_bot_credentials=bot1234567890:Axxxxxxxxxxxxxxxxxxx5-Yxxxxxxxxxxxo
+telegram_chat_id=-123456789
+domain_name=smm.jellyfishcoding.de

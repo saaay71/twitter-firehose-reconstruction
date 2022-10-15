@@ -1,0 +1,502 @@
+[
+    {
+        "created_at": "Sun Nov 21 12:59:17 +0000 2021",
+        "id": 1462405254243360771,
+        "id_str": "1462405254243360771",
+        "text": "Das nicht ausgezahlte Gehalt einer Kimmich-Quarant\\u00e4ne sind umgerechnet \\u00fcbrigens circa 23 Jahre in der Krankenpflege.",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "\\u003ca href=\\"http:\\/\\/twitter.com\\/download\\/iphone\\" rel=\\"nofollow\\"\\u003eTwitter for iPhone\\u003c\\/a\\u003e",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 39742366,
+            "id_str": "39742366",
+            "name": "Thomas Poppe",
+            "screen_name": "DerPoppe",
+            "location": "",
+            "description": "Sport, Politik, Familie, Bl\\u00f6dsinn | Team: @Szenario3 | Autor u. a. bei @HeuteShow, @FFHde. | Head of Humor beim @fums_magazin.",
+            "url": "https:\\/\\/t.co\\/jdik4oo6t1",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https:\\/\\/t.co\\/jdik4oo6t1",
+                            "expanded_url": "http:\\/\\/poppeprobierts.de",
+                            "display_url": "poppeprobierts.de",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 14081,
+            "friends_count": 840,
+            "listed_count": 384,
+            "created_at": "Wed May 13 12:46:14 +0000 2009",
+            "favourites_count": 46960,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 16470,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http:\\/\\/abs.twimg.com\\/images\\/themes\\/theme1\\/bg.png",
+            "profile_background_image_url_https": "https:\\/\\/abs.twimg.com\\/images\\/themes\\/theme1\\/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http:\\/\\/pbs.twimg.com\\/profile_images\\/1303741369199071234\\/g2mKQzm8_normal.jpg",
+            "profile_image_url_https": "https:\\/\\/pbs.twimg.com\\/profile_images\\/1303741369199071234\\/g2mKQzm8_normal.jpg",
+            "profile_banner_url": "https:\\/\\/pbs.twimg.com\\/profile_banners\\/39742366\\/1513051487",
+            "profile_link_color": "3B94D9",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "3A3727",
+            "profile_text_color": "000000",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none",
+            "withheld_in_countries": []
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 4157,
+        "favorite_count": 31893,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "de"
+    },
+    {
+        "created_at": "Fri Dec 17 22:18:21 +0000 2021",
+        "id": 1471968031999942657,
+        "id_str": "1471968031999942657",
+        "text": "@vonneudeck Es ist nur das ich Leuten die sich dar\\u00fcber aufregen entgegenkommen mag.\\nhttps:\\/\\/t.co\\/KBdh3viD33",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "screen_name": "vonneudeck",
+                    "name": "Nicolai von Neudeck",
+                    "id": 192600434,
+                    "id_str": "192600434",
+                    "indices": [
+                        0,
+                        11
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "https:\\/\\/t.co\\/KBdh3viD33",
+                    "expanded_url": "https:\\/\\/twitter.com\\/LilithWittmann\\/status\\/1471967860817895433?s=20",
+                    "display_url": "twitter.com\\/LilithWittmann\\u2026",
+                    "indices": [
+                        84,
+                        107
+                    ]
+                }
+            ]
+        },
+        "source": "\\u003ca href=\\"https:\\/\\/mobile.twitter.com\\" rel=\\"nofollow\\"\\u003eTwitter Web App\\u003c\\/a\\u003e",
+        "in_reply_to_status_id": 1471966934631698436,
+        "in_reply_to_status_id_str": "1471966934631698436",
+        "in_reply_to_user_id": 192600434,
+        "in_reply_to_user_id_str": "192600434",
+        "in_reply_to_screen_name": "vonneudeck",
+        "user": {
+            "id": 68170388,
+            "id_str": "68170388",
+            "name": "Lilith Wittmann",
+            "screen_name": "LilithWittmann",
+            "location": "Berlin, Deutschland",
+            "description": "Krawallinfluencerin, irgendwas mit Digitalisierung & gegen Kapitalismus; politisch hier \\ud83c\\udff3\\ufe0f\\u200d\\ud83c\\udf08. \\n\\ud83d\\udc69\\u200d\\ud83d\\udcbb @zerforschung & @bund_dev\\n\\u2709\\ufe0f mail@lilithwittmann.de.",
+            "url": "https:\\/\\/t.co\\/WtebzoFyp6",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https:\\/\\/t.co\\/WtebzoFyp6",
+                            "expanded_url": "https:\\/\\/www.patreon.com\\/LilithWittmann",
+                            "display_url": "patreon.com\\/LilithWittmann",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 22531,
+            "friends_count": 585,
+            "listed_count": 134,
+            "created_at": "Sun Aug 23 15:47:13 +0000 2009",
+            "favourites_count": 14481,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 6277,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http:\\/\\/abs.twimg.com\\/images\\/themes\\/theme4\\/bg.gif",
+            "profile_background_image_url_https": "https:\\/\\/abs.twimg.com\\/images\\/themes\\/theme4\\/bg.gif",
+            "profile_background_tile": false,
+            "profile_image_url": "http:\\/\\/pbs.twimg.com\\/profile_images\\/1448651932457844737\\/kNbNGdNx_normal.jpg",
+            "profile_image_url_https": "https:\\/\\/pbs.twimg.com\\/profile_images\\/1448651932457844737\\/kNbNGdNx_normal.jpg",
+            "profile_banner_url": "https:\\/\\/pbs.twimg.com\\/profile_banners\\/68170388\\/1459703120",
+            "profile_link_color": "9266CC",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none",
+            "withheld_in_countries": []
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": true,
+        "quoted_status_id": 1471967860817895433,
+        "quoted_status_id_str": "1471967860817895433",
+        "quoted_status": {
+            "created_at": "Fri Dec 17 22:17:40 +0000 2021",
+            "id": 1471967860817895433,
+            "id_str": "1471967860817895433",
+            "text": "Es ist f\\u00fcr mich nicht machbar, all die Infrastruktur, die ich so nebenbei betreibe, selbst zu verwalten. Es w\\u00e4re ne\\u2026 https:\\/\\/t.co\\/tRWAzjlzcO",
+            "truncated": true,
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [],
+                "urls": [
+                    {
+                        "url": "https:\\/\\/t.co\\/tRWAzjlzcO",
+                        "expanded_url": "https:\\/\\/twitter.com\\/i\\/web\\/status\\/1471967860817895433",
+                        "display_url": "twitter.com\\/i\\/web\\/status\\/1\\u2026",
+                        "indices": [
+                            117,
+                            140
+                        ]
+                    }
+                ]
+            },
+            "source": "\\u003ca href=\\"https:\\/\\/mobile.twitter.com\\" rel=\\"nofollow\\"\\u003eTwitter Web App\\u003c\\/a\\u003e",
+            "in_reply_to_status_id": 1471966351778623498,
+            "in_reply_to_status_id_str": "1471966351778623498",
+            "in_reply_to_user_id": 68170388,
+            "in_reply_to_user_id_str": "68170388",
+            "in_reply_to_screen_name": "LilithWittmann",
+            "user": {
+                "id": 68170388,
+                "id_str": "68170388",
+                "name": "Lilith Wittmann",
+                "screen_name": "LilithWittmann",
+                "location": "Berlin, Deutschland",
+                "description": "Krawallinfluencerin, irgendwas mit Digitalisierung & gegen Kapitalismus; politisch hier \\ud83c\\udff3\\ufe0f\\u200d\\ud83c\\udf08. \\n\\ud83d\\udc69\\u200d\\ud83d\\udcbb @zerforschung & @bund_dev\\n\\u2709\\ufe0f mail@lilithwittmann.de.",
+                "url": "https:\\/\\/t.co\\/WtebzoFyp6",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "https:\\/\\/t.co\\/WtebzoFyp6",
+                                "expanded_url": "https:\\/\\/www.patreon.com\\/LilithWittmann",
+                                "display_url": "patreon.com\\/LilithWittmann",
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 22531,
+                "friends_count": 585,
+                "listed_count": 134,
+                "created_at": "Sun Aug 23 15:47:13 +0000 2009",
+                "favourites_count": 14481,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 6277,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "000000",
+                "profile_background_image_url": "http:\\/\\/abs.twimg.com\\/images\\/themes\\/theme4\\/bg.gif",
+                "profile_background_image_url_https": "https:\\/\\/abs.twimg.com\\/images\\/themes\\/theme4\\/bg.gif",
+                "profile_background_tile": false,
+                "profile_image_url": "http:\\/\\/pbs.twimg.com\\/profile_images\\/1448651932457844737\\/kNbNGdNx_normal.jpg",
+                "profile_image_url_https": "https:\\/\\/pbs.twimg.com\\/profile_images\\/1448651932457844737\\/kNbNGdNx_normal.jpg",
+                "profile_banner_url": "https:\\/\\/pbs.twimg.com\\/profile_banners\\/68170388\\/1459703120",
+                "profile_link_color": "9266CC",
+                "profile_sidebar_border_color": "000000",
+                "profile_sidebar_fill_color": "000000",
+                "profile_text_color": "000000",
+                "profile_use_background_image": false,
+                "has_extended_profile": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 1,
+            "favorite_count": 66,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "de"
+        },
+        "retweet_count": 0,
+        "favorite_count": 4,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "de"
+    },
+    {
+        "created_at": "Tue Dec 21 16:14:38 +0000 2021",
+        "id": 1473326050440536075,
+        "id_str": "1473326050440536075",
+        "full_text": "Nachtrag 10: Positiver Schnelltest und Symptombeginn fielen bei mir auf den selben Tag. Zwei Tage sp\u00e4ter sagte mir die Corona-Warnapp dann auch, an welchem Tag ich mich wahrscheinlich infiziert habe. Inkubationszeit 5 Tage.\nhttps://t.co/tbxOXWZ7zV",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            247
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/tbxOXWZ7zV",
+                    "expanded_url": "https://twitter.com/DeluxeTussi/status/1473321959358410754?t=nCuh6QbNvj0fUzD7q_Esog&s=19",
+                    "display_url": "twitter.com/DeluxeTussi/st\u2026",
+                    "indices": [
+                        224,
+                        247
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "in_reply_to_status_id": 1473320030079225862,
+        "in_reply_to_status_id_str": "1473320030079225862",
+        "in_reply_to_user_id": 37637760,
+        "in_reply_to_user_id_str": "37637760",
+        "in_reply_to_screen_name": "Symposiarchin",
+        "user": {
+            "id": 37637760,
+            "id_str": "37637760",
+            "name": "Frau Lindhold",
+            "screen_name": "Symposiarchin",
+            "location": "Tol Eress\u00eba",
+            "description": "Liest Philosophie, Phantastik und spekulative Fiktion. Rezensiert Romane und Comics. In der @phantbest-Jury f\u00fcr @Teilzeithelden. Schaut @Twilm_de. She/her, cis.",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 3598,
+            "friends_count": 981,
+            "listed_count": 145,
+            "created_at": "Mon May 04 11:05:41 +0000 2009",
+            "favourites_count": 47407,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 32962,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "9AE4E8",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/976903262694707200/CXiccTx6_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/976903262694707200/CXiccTx6_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/37637760/1403365810",
+            "profile_link_color": "981CEB",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "DDFFCC",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none",
+            "withheld_in_countries": []
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": true,
+        "quoted_status_id": 1473321959358410754,
+        "quoted_status_id_str": "1473321959358410754",
+        "quoted_status_permalink": {
+            "url": "https://t.co/tbxOXWZ7zV",
+            "expanded": "https://twitter.com/DeluxeTussi/status/1473321959358410754?t=nCuh6QbNvj0fUzD7q_Esog&s=19",
+            "display": "twitter.com/DeluxeTussi/st\u2026"
+        },
+        "quoted_status": {
+            "created_at": "Tue Dec 21 15:58:22 +0000 2021",
+            "id": 1473321959358410754,
+            "id_str": "1473321959358410754",
+            "full_text": "@Symposiarchin Wie lang hat es denn von positiven Schnelltest bis Symptombeginn gedauert?",
+            "truncated": false,
+            "display_text_range": [
+                15,
+                89
+            ],
+            "entities": {
+                "hashtags": [],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "Symposiarchin",
+                        "name": "Frau Lindhold",
+                        "id": 37637760,
+                        "id_str": "37637760",
+                        "indices": [
+                            0,
+                            14
+                        ]
+                    }
+                ],
+                "urls": []
+            },
+            "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+            "in_reply_to_status_id": 1473235769523380226,
+            "in_reply_to_status_id_str": "1473235769523380226",
+            "in_reply_to_user_id": 37637760,
+            "in_reply_to_user_id_str": "37637760",
+            "in_reply_to_screen_name": "Symposiarchin",
+            "user": {
+                "id": 1264987421147627520,
+                "id_str": "1264987421147627520",
+                "name": "Dr. Tussi \ud83e\udd18",
+                "screen_name": "DeluxeTussi",
+                "location": "",
+                "description": "molecular genetics, biochemistry, microbiologist, science fan, nerd, mother, loves Death metal",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 137,
+                "friends_count": 188,
+                "listed_count": 0,
+                "created_at": "Mon May 25 18:31:31 +0000 2020",
+                "favourites_count": 4103,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 1591,
+                "lang": null,
+                "contributors_enabled": false,
+                "is_translator": false,
+                "is_translation_enabled": false,
+                "profile_background_color": "F5F8FA",
+                "profile_background_image_url": null,
+                "profile_background_image_url_https": null,
+                "profile_background_tile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1466012558368948234/jnamd7V2_normal.jpg",
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1466012558368948234/jnamd7V2_normal.jpg",
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/1264987421147627520/1638306327",
+                "profile_link_color": "1DA1F2",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "has_extended_profile": false,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": false,
+                "follow_request_sent": false,
+                "notifications": false,
+                "translator_type": "none",
+                "withheld_in_countries": []
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "is_quote_status": false,
+            "retweet_count": 0,
+            "favorite_count": 2,
+            "favorited": false,
+            "retweeted": false,
+            "lang": "de"
+        },
+        "retweet_count": 2,
+        "favorite_count": 732,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "de"
+    }
+]

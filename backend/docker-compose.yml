@@ -1,0 +1,227 @@
+version: "3"
+services:
+  # Consume filtered stream, calculate best servers and put known snowflakes in queue
+  analysisworker:
+    build: ./analysisworker
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      RABBITMQ_QUEUE_NAME: ${RABBITMQ_STREAM_QUEUE}
+      RABBITMQ_EXCHANGE_NAME: ${RABBITMQ_EXCHANGE_NAME}
+      RABBITMQ_TTL: ${RABBITMQ_TTL}
+      TWITTER_BEARER_TOKEN: ${TWITTER_BEARER_TOKEN}
+    networks:
+      - messagequeue
+      - config
+    restart: on-failure
+
+  # Fetch known good tweets from analysisworker in order to not flaw our stats
+  # and to scale downloadworkers independently from streamworkers
+  streamworker:
+    build: ./downloadworker
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      RABBITMQ_QUEUE_NAME: ${RABBITMQ_STREAM_QUEUE}
+      RABBITMQ_EXCHANGE_NAME: ${RABBITMQ_EXCHANGE_NAME}
+      RABBITMQ_TTL: ${RABBITMQ_TTL}
+      CASSANDRA_USERNAME: ${CASSANDRA_USERNAME}
+      CASSANDRA_PASSWORD: ${CASSANDRA_PASSWORD}
+      CASSANDRA_HOST: ${CASSANDRA_HOST}
+      CREDENTIALSMANAGER_HOST: ${CREDENTIALSMANAGER_HOST}
+      CREDENTIALSMANAGER_PORT: ${CREDENTIALSMANAGER_PORT}
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_KEY_SECRET: ${TWITTER_CONSUMER_KEY_SECRET}
+      WORKER_TYPE: STREAM
+    networks:
+      - messagequeue
+      - db
+      - config
+    restart: on-failure
+
+  # Fetch credentials from oauth webpage and manage them for workers
+  credentialsmanager:
+    build: ./credentialsmanager
+    environment:
+      TWITTER_USER_CREDENTIALS_URL: ${TWITTER_USER_CREDENTIALS_URL}
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_KEY_SECRET: ${TWITTER_CONSUMER_KEY_SECRET}
+      REDIS_HOST: ${REDIS_HOST}
+    ports:
+      - "5000:5000"
+    networks:
+      - config
+
+  # Fetch guessed snowflake ids from taskmanager
+  downloadworker:
+    build: ./downloadworker
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      RABBITMQ_QUEUE_NAME: ${RABBITMQ_DOWNLOAD_QUEUE}
+      RABBITMQ_EXCHANGE_NAME: ${RABBITMQ_EXCHANGE_NAME}
+      RABBITMQ_TTL: ${RABBITMQ_TTL}
+      CASSANDRA_USERNAME: ${CASSANDRA_USERNAME}
+      CASSANDRA_PASSWORD: ${CASSANDRA_PASSWORD}
+      CASSANDRA_HOST: ${CASSANDRA_HOST}
+      CREDENTIALSMANAGER_HOST: ${CREDENTIALSMANAGER_HOST}
+      CREDENTIALSMANAGER_PORT: ${CREDENTIALSMANAGER_PORT}
+      TWITTER_CONSUMER_KEY: ${TWITTER_CONSUMER_KEY}
+      TWITTER_CONSUMER_KEY_SECRET: ${TWITTER_CONSUMER_KEY_SECRET}
+      WORKER_TYPE: DOWNLOAD
+    networks:
+      - messagequeue
+      - db
+      - config
+    restart: on-failure
+
+  # Make educated guesses on snowflake ids with info from analysisworker
+  # Rate limit them to fit the current number of credentials
+  taskmanager:
+    build: ./taskmanager
+    environment:
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USERNAME: ${RABBITMQ_USERNAME}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      RABBITMQ_QUEUE_NAME: ${RABBITMQ_DOWNLOAD_QUEUE}
+      RABBITMQ_EXCHANGE_NAME: ${RABBITMQ_EXCHANGE_NAME}
+      RABBITMQ_TTL: ${RABBITMQ_TTL}
+      CREDENTIALSMANAGER_HOST: ${CREDENTIALSMANAGER_HOST}
+      CREDENTIALSMANAGER_PORT: ${CREDENTIALSMANAGER_PORT}
+      REDIS_HOST: ${REDIS_HOST}
+      WORK_TYPE: LIVE
+    networks:
+      - messagequeue
+      - db
+      - config
+
+  # Redis is our datastorage for the information on best servers per timeframe
+  # Source: https://github.com/bitnami/bitnami-docker-redis/blob/master/docker-compose.yml
+  redis:
+    image: docker.io/bitnami/redis:6.2
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis_data:/bitnami/redis/data"
+    networks:
+      - config
+
+  # RabbitMQ is our message queue for snowflake ids
+  # Source: https://github.com/bitnami/bitnami-docker-rabbitmq/blob/master/docker-compose.yml
+  rabbitmq:
+    image: docker.io/bitnami/rabbitmq:3.9
+    ports:
+      - "4369:4369"
+      - "5551:5551"
+      - "5552:5552"
+      - "5672:5672"
+      - "25672:25672"
+      - "15672:15672"
+      - "15692:15692"
+    environment:
+      - RABBITMQ_SECURE_PASSWORD=yes
+      - RABBITMQ_DISK_FREE_ABSOLUTE_LIMIT=500MB
+      - RABBITMQ_PLUGINS=rabbitmq_prometheus
+    volumes:
+      - "rabbitmq_data:/bitnami/rabbitmq/mnesia"
+      - "./rabbitmq/custom.conf:/bitnami/rabbitmq/conf/custom.conf:ro"
+    networks:
+      - messagequeue
+
+  # Cassandra is our distibuted tweet information storage
+  # Unfortunately, cassandra is not automatically scalable in a cloud-native way since seeds have to
+  # be set manually. There are several workarounds to this in https://github.com/docker-library/cassandra/issues/94
+  # For now, we go with this manual setup which can also be scaled in production, albeit only manually.
+  # Source: https://github.com/bitnami/bitnami-docker-cassandra/blob/master/docker-compose-cluster.yml
+  cassandra:
+    image: docker.io/bitnami/cassandra:4.0
+    ports:
+      - 7000:7000
+      - 9042:9042
+    volumes:
+      - ./db/init-scripts:/docker-entrypoint-initdb.d
+      - cassandra_data1:/bitnami
+    healthcheck:
+      test: ["CMD", "/opt/bitnami/cassandra/bin/nodetool", "status"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+    environment:
+      # You need this if you have multiple cassandra instances:
+      #- CASSANDRA_SEEDS=cassandra
+      CASSANDRA_CLUSTER_NAME: cassandra-cluster2
+      CASSANDRA_PASSWORD_SEEDER: "yes"
+      CASSANDRA_PASSWORD: ${CASSANDRA_PASSWORD}
+      # By default, Cassandra autodetects the available host memory and takes as much as it can.
+      # Therefore, memory options are mandatory if multiple Cassandras are launched in the same node.
+      MAX_HEAP_SIZE: 20G
+      HEAP_NEWSIZE: 2000M
+      BITNAMI_DEBUG: 1
+    networks:
+      - db
+  # cassandra2:
+  #   image: docker.io/bitnami/cassandra:4.0
+  #   ports:
+  #     - 7001:7000
+  #     - 9043:9042
+  #   volumes:
+  #     #- ./db/init-scripts:/docker-entrypoint-initdb.d
+  #     - cassandra2_data:/bitnami
+  #   healthcheck:
+  #     test: ["CMD", "cqlsh", "-u cassandra", "-p cassandra" ,"-e describe keyspaces"]
+  #     interval: 15s
+  #     timeout: 10s
+  #     retries: 10
+  #   environment:
+  #     - CASSANDRA_SEEDS=cassandra1
+  #     - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+  #     - CASSANDRA_PASSWORD=cassandra
+  #     # By default, Cassandra autodetects the available host memory and takes as much as it can.
+  #     # Therefore, memory options are mandatory if multiple Cassandras are launched in the same node.
+  #     - MAX_HEAP_SIZE=2G
+  #     - HEAP_NEWSIZE=200M
+  #   networks:
+  #     - db
+
+  # elk in combination with GELF docker logger and custom logstash exporters
+  # would have been the choice for cross-component logging and visualisation {kibana}
+  # if there would have been more time
+  # elk:
+  #   image: sebp/elk
+  #   ports:
+  #     - "5601:5601"
+  #     - "9200:9200"
+  #     - "5044:5044"
+  #     - "9600:9600"
+
+volumes:
+  cassandra_data1:
+    driver: local
+  #cassandra2_data:
+  #  driver: local
+  rabbitmq_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  messagequeue:
+    name: messagequeuenetwork
+    driver: bridge
+  db:
+    name: dbnetwork
+    driver: bridge
+  config:
+    name: confignetwork
+    driver: bridge
